@@ -1,0 +1,133 @@
+body{
+    background-color: rgb(255, 0, 255);
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.music_player{
+    margin: 5rem 5rem 0rem 5rem;
+    display: flex;
+    width: 40rem;
+    background-color: rgb(189, 219, 16);
+    border-radius: 10px;
+    border: 25px rgb(128, 0, 100) solid;
+    box-shadow: 0.1rem 0.6rem 10px black;
+    transition: all 2s linear;
+}
+
+.music_player:hover{
+    border-top: 5rem;
+    /* things to experiment */
+    border-color: rgb(241, 6, 163);
+    /* border: 10px; */
+    border-bottom: 3rem;
+}
+
+.music_player img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin: 2rem;
+}
+
+.roll{
+    animation: img 3s ease-in-out infinite;
+}
+@keyframes img {
+    0%{
+
+        transform: rotate(4deg);
+    }
+
+    10%{
+
+        transform: rotate(40deg);
+    }
+
+    20%{
+
+        transform: rotate(80deg);
+    }
+
+    30%{
+
+        transform: rotate(120deg);
+    }
+
+    
+
+    100%{
+
+        transform: rotate(360deg);
+    }
+}
+
+.music_player::before{
+    margin: 7px;
+    content: '';
+    width: 7.2rem;
+    height: 2rem;
+    overflow:hidden;
+    background:rgb(2, 117, 248);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-radius: 30px;
+    background: linear-gradient(to right, rgba(253, 228, 4, 0.836), rgb(7, 7, 7));
+    position: absolute;
+    /* top: 14rem; */
+    z-index: 2;
+    animation: image 2s ease-in-out infinite;
+
+}
+@keyframes image {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+    }
+}
+input[type="file"]{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+#input{
+    height: fit-content;
+    width: fit-content;
+}
+
+#music{
+    color: aqua;
+    font-size: 1.2rem;
+    /* box-shadow: 0.1rem 0rem 15px rgb(180, 158, 158); */
+    margin-bottom: 3rem;
+
+}
+
+#musicbox{
+    padding: 1.4rem;
+    margin: 0rem;
+    background: linear-gradient(to right, rgb(253, 228, 4), rgb(7, 7, 7));
+}
+h1{
+    top: 3rem;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    color: aqua;
+    position: absolute;
+    z-index: 2;
+    box-shadow: 0.1rem 0.6rem 10px rgb(238, 223, 7);
+
+}
